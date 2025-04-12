@@ -9799,6 +9799,7 @@ textarea.form-control {
 
 
 
+
 /* PROFILE PIC FIX */
 .profile-pic-container {
   display: flex;
@@ -9866,6 +9867,19 @@ textarea.form-control {
   display: block;
   position: absolute;
   bottom: -5px;
+
+
+/* FIX DOUBLE UNDERLINE IN NAVBAR */
+.navbar-nav .nav-link span {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-nav .nav-link span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+>
   left: 0;
   height: 2px;
   background: #0d6eb8;
@@ -9877,4 +9891,11 @@ textarea.form-control {
 .navbar-nav .nav-link:hover span::after {
   width: 100%;
 }
+
+
+/* REMOVE ANY STATIC UNDERLINE CLASS */
+.navbar-nav .nav-link .underline {
+  display: none;
+}
+
 
