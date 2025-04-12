@@ -9797,51 +9797,64 @@ textarea.form-control {
 
 
 
-/* Fix profile picture appearance in mobile and desktop */
+
+/* PROFILE PIC FIX */
 .profile-pic-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
 .profile-pic-container img {
-  max-width: 180px;
+  max-width: 220px;
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.about-info {
-  word-wrap: break-word;
-  font-size: 15px;
-}
-
-/* Prevent overflow of skills and about me */
+/* TEXT OVERFLOW PREVENTION */
+.about-info,
 .skill-mf {
-  padding-right: 15px;
-  padding-left: 15px;
+  word-wrap: break-word;
   overflow-wrap: break-word;
+  padding: 15px;
 }
 
-/* Fix progress bar overflowing */
-.skill-mf .progress {
-  width: 100%;
+/* PROGRESS BAR FIX */
+.progress,
+.progress-bar {
+  max-width: 100%;
   overflow: hidden;
 }
 
-/* Fix My Journey boxes to be stacked like education */
+/* MY JOURNEY BOX STYLING LIKE EDUCATION */
 #myjourney-section .resume-wrap {
-  border: 1px solid #ccc;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 30px;
-  background-color: #f9f9f9;
 }
 
-/* Fix double underline in navbar */
+/* SPACING AFTER EACH JOURNEY BOX */
+#myjourney-section .resume-wrap + .resume-wrap {
+  margin-top: 20px;
+}
+
+/* LINKEDIN BUTTON CENTER ON MOBILE */
+@media (max-width: 768px) {
+  .linkedin-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* NAV MENU UNDERLINE FIX */
 .navbar-nav .nav-link span::after {
   content: '';
   display: block;
@@ -9857,17 +9870,8 @@ textarea.form-control {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .navbar-nav .nav-link span::after {
-    width: 100% !important;
-  }
-  .about-info {
-    font-size: 14px;
-    text-align: left;
-  }
-  .skill-mf {
-    padding-left: 0;
-    padding-right: 0;
+    width: 100%;
   }
 }
-
