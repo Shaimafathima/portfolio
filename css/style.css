@@ -9800,39 +9800,44 @@ textarea.form-control {
 
 
 
-/* PROFILE PIC FIX */
+
+/* PROFILE IMAGE SIZE & CENTERING */
 .profile-pic-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
 
 .profile-pic-container img {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-/* TEXT OVERFLOW PREVENTION */
-.about-info,
-.skill-mf {
+@media (max-width: 768px) {
+  .profile-pic-container img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ABOUT ME RESPONSIVE TEXT FIX */
+.about-info, .skill-mf {
   word-wrap: break-word;
   overflow-wrap: break-word;
   padding: 15px;
 }
 
 /* PROGRESS BAR FIX */
-.progress,
-.progress-bar {
+.progress, .progress-bar {
   max-width: 100%;
   overflow: hidden;
 }
 
-/* MY JOURNEY BOX STYLING LIKE EDUCATION */
+/* MY JOURNEY BOX SEPARATION AND MOBILE STACK FIX */
 #myjourney-section .resume-wrap {
   background: #1a1a1a;
   color: #fff;
@@ -9842,44 +9847,22 @@ textarea.form-control {
   margin-bottom: 30px;
 }
 
-/* SPACING AFTER EACH JOURNEY BOX */
-#myjourney-section .resume-wrap + .resume-wrap {
-  margin-top: 20px;
-}
-
-/* LINKEDIN BUTTON CENTER ON MOBILE */
 @media (max-width: 768px) {
-  .linkedin-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  #myjourney-section .resume-wrap {
+    margin-bottom: 20px;
   }
 }
 
-/* NAV MENU UNDERLINE FIX */
+/* REMOVE EXTRA NAVBAR UNDERLINE */
 .navbar-nav .nav-link span {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 .navbar-nav .nav-link span::after {
   content: '';
-  display: block;
   position: absolute;
   bottom: -5px;
-
-
-/* FIX DOUBLE UNDERLINE IN NAVBAR */
-.navbar-nav .nav-link span {
-  position: relative;
-  display: inline-block;
-}
-
-.navbar-nav .nav-link span::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
->
   left: 0;
   height: 2px;
   background: #0d6eb8;
@@ -9892,10 +9875,8 @@ textarea.form-control {
   width: 100%;
 }
 
-
-/* REMOVE ANY STATIC UNDERLINE CLASS */
-.navbar-nav .nav-link .underline {
-  display: none;
+/* REMOVE STATIC UNDERLINE BLOCK */
+.underline {
+  display: none !important;
 }
-
 
