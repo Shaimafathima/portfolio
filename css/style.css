@@ -9798,6 +9798,7 @@ textarea.form-control {
 
 
 
+
 /* PROFILE PIC FIX */
 .profile-pic-container {
   display: flex;
@@ -9855,14 +9856,21 @@ textarea.form-control {
 }
 
 /* NAV MENU UNDERLINE FIX */
+.navbar-nav .nav-link span {
+  display: inline-block;
+  position: relative;
+}
+
 .navbar-nav .nav-link span::after {
   content: '';
   display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   height: 2px;
   background: #0d6eb8;
-  margin: auto;
-  transition: width 0.4s ease;
   width: 0;
+  transition: width 0.4s ease;
 }
 
 .navbar-nav .nav-link.active span::after,
@@ -9870,8 +9878,3 @@ textarea.form-control {
   width: 100%;
 }
 
-@media (max-width: 991.98px) {
-  .navbar-nav .nav-link span::after {
-    width: 100%;
-  }
-}
