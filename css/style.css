@@ -9799,73 +9799,17 @@ textarea.form-control {
 
 
 
-/* PROFILE PIC FIX */
-.profile-pic-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  text-align: center;
-}
 
-.profile-pic-container img {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* TEXT OVERFLOW PREVENTION */
-.about-info,
-.skill-mf {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  padding: 15px;
-}
-
-/* PROGRESS BAR FIX */
-.progress,
-.progress-bar {
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* MY JOURNEY BOX STYLING LIKE EDUCATION */
-#myjourney-section .resume-wrap {
-  background: #1a1a1a;
-  color: #fff;
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-/* SPACING AFTER EACH JOURNEY BOX */
-#myjourney-section .resume-wrap + .resume-wrap {
-  margin-top: 20px;
-}
-
-/* LINKEDIN BUTTON CENTER ON MOBILE */
-@media (max-width: 768px) {
-  .linkedin-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-}
-
-/* NAV MENU UNDERLINE FIX */
+/* FIX DOUBLE UNDERLINE IN NAVBAR */
 .navbar-nav .nav-link span {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 .navbar-nav .nav-link span::after {
   content: '';
-  display: block;
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   height: 2px;
   background: #0d6eb8;
@@ -9876,5 +9820,10 @@ textarea.form-control {
 .navbar-nav .nav-link.active span::after,
 .navbar-nav .nav-link:hover span::after {
   width: 100%;
+}
+
+/* REMOVE ANY STATIC UNDERLINE CLASS */
+.navbar-nav .nav-link .underline {
+  display: none;
 }
 
