@@ -9803,28 +9803,23 @@ textarea.form-control {
 
 
 
-/* ---- FIX DOUBLE NAVBAR UNDERLINE ---- */
-.ftco-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
-  display: none !important;
+
+/* ✅ CENTER PROFILE IMAGE */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
-/* ---- ABOUT ME TEXT FIX ---- */
-.about-info {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  font-size: 16px;
-  line-height: 1.6;
-  padding-right: 10px;
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-
-/* ---- PROFILE PIC ADJUSTED FOR BOTH DEVICES ---- */
 .profile-pic-container img {
   width: 180px;
   height: 180px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -9834,7 +9829,39 @@ textarea.form-control {
   }
 }
 
-/* ---- MY JOURNEY BOX FIX ---- */
+/* ✅ ABOUT ME + PROGRESS BAR FIX */
+.about-info,
+.skill-mf {
+  padding: 15px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about-info p {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.progress,
+.progress-bar {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* ✅ MY JOURNEY BOX FIX */
 #myjourney-section .resume-wrap {
   margin-bottom: 30px;
   padding: 20px;
@@ -9849,4 +9876,9 @@ textarea.form-control {
     display: block;
     width: 100%;
   }
+}
+
+/* ✅ NAVBAR UNDERLINE FIX */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
+  display: none !important;
 }
