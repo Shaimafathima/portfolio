@@ -9794,3 +9794,49 @@ textarea.form-control {
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
   color: #0d6eb8 !important;
 }
+
+
+/* Fix profile picture appearance in mobile */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-pic-container img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Fix My Journey boxes to stack on mobile */
+@media (max-width: 768px) {
+  .resume-wrap {
+    margin-bottom: 30px;
+  }
+}
+
+/* Center menu underline in mobile */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link span {
+    display: inline-block;
+    position: relative;
+  }
+
+  .navbar-nav .nav-link span::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0;
+    background: #0d6eb8;
+    transition: width 0.4s ease;
+  }
+
+  .navbar-nav .nav-link.active span::after,
+  .navbar-nav .nav-link:hover span::after {
+    width: 100%;
+  }
+}
