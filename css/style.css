@@ -9803,104 +9803,50 @@ textarea.form-control {
 
 
 
-/* ✅ PROFILE PICTURE FIX */
-.profile-pic-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
+/* ---- FIX DOUBLE NAVBAR UNDERLINE ---- */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
+  display: none !important;
 }
 
-.profile-pic-container img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .profile-pic-container img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* ✅ ABOUT ME + PROGRESS BAR FIX */
-.about-info,
-.skill-mf {
-  padding: 15px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-}
-
-.about-info p {
-  margin: 0;
-  padding: 0;
+/* ---- ABOUT ME TEXT FIX ---- */
+.about-info {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 16px;
   line-height: 1.6;
-}
-
-/* ✅ PROGRESS BAR FIX */
-.progress,
-.progress-bar {
-  width: 100%;
-  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
-/* ✅ MY JOURNEY BOXES - SEPARATE + MOBILE FIX */
+/* ---- PROFILE PIC ADJUSTED FOR BOTH DEVICES ---- */
+.profile-pic-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .profile-pic-container img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ---- MY JOURNEY BOX FIX ---- */
 #myjourney-section .resume-wrap {
-  background: #1a1a1a;
-  color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #1a1a1a;
   border: 1px solid #444;
   border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 40px;
-}
-
-#myjourney-section .resume-wrap + .resume-wrap {
-  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
   #myjourney-section .resume-wrap {
+    margin-bottom: 25px;
     display: block;
     width: 100%;
-    margin-bottom: 25px;
   }
 }
-
-/* ✅ NAVBAR UNDERLINE FIX - REMOVE DOUBLE LINES */
-.navbar-nav .nav-link span {
-  position: relative;
-  display: inline-block;
-}
-
-.navbar-nav .nav-link span::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background: #0d6eb8;
-  width: 0;
-  transition: width 0.4s ease;
-}
-
-.navbar-nav .nav-link.active span::after,
-.navbar-nav .nav-link:hover span::after {
-  width: 100%;
-}
-
-/* ✅ REMOVE STATIC UNDERLINE BLOCK */
-.underline {
-  display: none !important;
-}
-
