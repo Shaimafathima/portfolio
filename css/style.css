@@ -9794,3 +9794,12 @@ textarea.form-control {
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
   color: #0d6eb8 !important;
 }
+
+@media (max-width: 768px) {
+  .heading-section p {
+    font-size: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-right: 10px;
+  }
+}
