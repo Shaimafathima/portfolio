@@ -110,6 +110,63 @@
 }
 
 
+
+/* ==== RESPONSIVE FIXES FOR MOBILE VIEW ==== */
+
+.profile-pic-container img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Fix overflow and wrapping for About Me text */
+.heading-section p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Prevent horizontal scroll issues */
+.about-mf .box-shadow-full {
+  overflow-x: hidden;
+}
+
+/* Progress bars and text scaling */
+.skill-mf .progress {
+  width: 100%;
+}
+
+/* Mobile view fixes */
+@media (max-width: 768px) {
+  .col-md-6.col-lg-5.d-flex,
+  .col-12.col-md-6.col-lg-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-12.col-md-6.col-lg-7 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .heading-section p {
+    font-size: 15px;
+  }
+
+  .progress {
+    height: 0.6rem !important;
+  }
+
+  .progress-bar {
+    height: 0.6rem !important;
+  }
+
+  .about-info p {
+    font-size: 14px;
+  }
+}
+
+
 </style>
 
 
