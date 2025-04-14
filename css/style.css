@@ -9748,58 +9748,233 @@ textarea.form-control {
 
 
 
-/* 💙 FINAL FIX — Remove yellow underline and force only blue underline for navbar links */
-
+/* Base nav link style */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   position: relative;
   color: white !important;
-  border: none !important;
   text-decoration: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
+  background: transparent;
+  box-shadow: none;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* 🧹 Completely disable any yellow underline or pseudo elements */
+/* Remove existing yellow underline */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link::before,
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link span::before {
   content: none !important;
   display: none !important;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
-/* 💙 Only show blue underline via ::after */
+/* Blue underline - auto width */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link::after {
   content: "";
   position: absolute;
+  left: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   height: 2px;
+  background-color: #0d6eb8;
   width: 0;
-  background-color: #0d6eb8 !important;
   transition: width 0.3s ease;
 }
 
-
-/* 💙 Show blue underline on hover and when active */
+/* Show underline only under text */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover::after,
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active::after {
-  width: 70%; /* ⬅ use 50% so the underline is shorter */
+  width: 100%;
 }
 
-
-/* 💙 Make active text blue */
+/* Blue text for active link */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
   color: #0d6eb8 !important;
 }
 
-@media (max-width: 768px) {
-  .heading-section p {
-    font-size: 15px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding-right: 10px;
+
+
+.internship-card {
+  background-color: #1c1c1e;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.intern-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.internship-card ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.internship-card li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+.intern-date {
+  color: #facc15; /* nice yellow */
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.intern-role {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+
+/* Blue-colored date style */
+.blue-date {
+  color: #3399ff !important;
+  font-weight: bold;
+}
+
+
+/* Add spacing between resume sections */
+.resume-wrap {
+  margin-bottom: 30px; /* Adjust the space as needed */
+}
+
+
+/* Add vertical space between internship boxes on small screens */
+@media (max-width: 767.98px) {
+  .resume-wrap {
+    margin-bottom: 30px;
   }
 }
+
+
+/* Ensure spacing between internship boxes in all views */
+.resume-wrap {
+  margin-bottom: 30px;
+}
+
+
+/* Fix spacing between internship boxes */
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+/* Add spacing before each progress bar */
+.progress {
+  margin-top: 8px;
+}
+
+
+/* Add spacing before progress bars */
+.progress {
+  margin-top: 10px;
+  margin-bottom: 20px; /* adds space below the bar */
+}
+
+
+/* Spacing fix for skills progress bars */
+.skill-mf .progress {
+  margin-top: 8px;      /* space between label and bar */
+  margin-bottom: 20px;  /* space after each bar */
+}
+
+
+
+
+/* Make progress bars fit within mobile screen */
+.skill-mf .progress {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.skill-mf {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+/* Fix About Me padding on mobile view */
+@media (max-width: 768px) {
+  .about-info p,
+  .about-info span,
+  .heading-section p,
+  .about-info .d-flex {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .col-12.col-md-6.col-lg-7 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+
+
+.info p {
+  white-space: nowrap;
+}
+
+
+
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-info p {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+
+
+.profile-pic-container img {
+  width: 100%;
+  max-width: 200px; /* change this from 250px */
+}
+
+
+
+
+
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-info p {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+}
+
+.about-info p span.title-s {
+  display: inline-block;
+  min-width: 90px; /* adjust this value as needed */
+  font-weight: 600;
+  color: #e2e6ea;
+}
+
+
