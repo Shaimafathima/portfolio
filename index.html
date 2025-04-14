@@ -270,9 +270,11 @@
   display: flex;
   align-items: flex-start;
   padding: 6px 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 💥 this prevents breaking */
   font-size: 15px;
+  overflow-wrap: anywhere; /* 💥 this helps email wrap smartly if really needed */
 }
+
 
 .about-info .title-s {
   width: 150px;
