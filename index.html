@@ -202,10 +202,14 @@
   }
 
   .about-info li {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  flex-wrap: nowrap;
+  text-align: left !important;
+}
+
 
   .about-info li span:first-child {
     font-weight: bold;
