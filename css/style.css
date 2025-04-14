@@ -9849,6 +9849,154 @@ textarea.form-control {
 @media (max-width: 767.98px) {
   .resume-wrap {
     margin-bottom: 30px;
+
+  }
+}
+
+
+/* Ensure spacing between internship boxes in all views */
+.resume-wrap {
+  margin-bottom: 30px;
+}
+
+
+/* Fix spacing between internship boxes */
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+/* Add spacing before each progress bar */
+.progress {
+  margin-top: 8px;
+}
+
+
+/* Add spacing before progress bars */
+.progress {
+  margin-top: 10px;
+  margin-bottom: 20px; /* adds space below the bar */
+}
+
+
+/* Spacing fix for skills progress bars */
+.skill-mf .progress {
+  margin-top: 8px;      /* space between label and bar */
+  margin-bottom: 20px;  /* space after each bar */
+}
+
+
+
+
+/* Make progress bars fit within mobile screen */
+.skill-mf .progress {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.skill-mf {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+/* Fix About Me padding on mobile view */
+@media (max-width: 768px) {
+  .about-info p,
+  .about-info span,
+  .heading-section p,
+  .about-info .d-flex {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .col-12.col-md-6.col-lg-7 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+
+
+.info p {
+  white-space: nowrap;
+}
+
+
+
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-info p {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+
+
+.profile-pic-container img {
+  width: 100%;
+  max-width: 200px; /* change this from 250px */
+}
+
+
+
+
+
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.about-info p {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+}
+
+.about-info p span.title-s {
+  display: inline-block;
+  min-width: 90px; /* adjust this value as needed */
+  font-weight: 600;
+  color: #e2e6ea;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .profile-pic-container {
+    justify-content: center !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-mf .row > .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .profile-pic-container img {
+    margin-left: auto;
+    margin-right: auto;
+
   }
 }
 
@@ -9997,3 +10145,8 @@ textarea.form-control {
     margin-right: auto;
   }
 }
+
+
+
+
+
