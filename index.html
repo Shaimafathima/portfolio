@@ -188,6 +188,61 @@
 }
 
 
+/* Fix for horizontal scroll on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+@media (max-width: 768px) {
+  .col-md-6.col-lg-5.d-flex,
+  .col-12.col-md-6.col-lg-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .col-12.col-md-6.col-lg-7 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .heading-section p {
+    font-size: 15px;
+  }
+
+  .progress {
+    height: 0.6rem !important;
+  }
+
+  .progress-bar {
+    height: 0.6rem !important;
+  }
+
+  .about-info p {
+    font-size: 14px;
+  }
+
+  /* ✅ ADD THIS PART HERE */
+  .container,
+  .row,
+  .col-12,
+  .col-md-6,
+  .col-lg-7 {
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+}
+
+
+
 </style>
 
 
@@ -293,15 +348,15 @@
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
+								<div class="row align-items-center justify-content-center flex-column flex-md-row text-center">
+									<div class="col-sm-12 col-md-5 d-flex justify-content-center">
 										<div class="profile-pic-container">
 											<img src="images/shaiiii.jpeg" class="img-fluid rounded-circle shadow" alt="Profile Picture">
 										  </div>
 										  
 									</div>
 									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
+									<div class="col-sm-12 col-md-7">
 										<div class="about-info">
 											<p><span class="title-s">Name:</span> <span>Fathima Shaima</span></p>
 <p><span class="title-s">Title:</span> <span>Web Developer</span></p>
@@ -312,7 +367,7 @@
 										  
 									</div>
 								  </div>
-
+								  
 								<div class="skill-mf">
 									<p class="title-s">Technical Skills</p>
 									<span>HTML</span> <span class="pull-right">90%</span>
@@ -383,20 +438,18 @@
 						</div>
 
 
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								
-								<p>
-									<a href="https://www.linkedin.com/in/fathima-shaima-45061926a/"
-									   class="btn py-3 px-3"
-									   style="background-color: #0d6eb8; color: white; border: none;">
-									   LinkedIn
-									</a>
-								  </p>
-								  
-
+						<div class="counter-wrap ftco-animate d-flex mt-md-3 justify-content-center">
+							<div class="text text-center w-100">
+							  <p>
+								<a href="https://www.linkedin.com/in/fathima-shaima-45061926a/"
+								   class="btn py-3 px-3"
+								   style="background-color: #0d6eb8; color: white; border: none;">
+								   LinkedIn
+								</a>
+							  </p>
 							</div>
-						</div>
+						  </div>
+						  
 					</div>
 				</div>
 			</div>
