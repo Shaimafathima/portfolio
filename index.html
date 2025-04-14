@@ -157,36 +157,134 @@
   width: 100%;
 }
 
-/* Mobile view fixes */
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
-  .col-md-6.col-lg-5.d-flex,
-  .col-12.col-md-6.col-lg-7 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .col-12.col-md-6.col-lg-7 {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  .heading-section p {
-    font-size: 15px;
-  }
-
-  .progress {
-    height: 0.6rem !important;
-  }
-
-  .progress-bar {
-    height: 0.6rem !important;
+  /* Profile Info: Keep label + value inline */
+  .about-info {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 0;
   }
 
   .about-info p {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
     font-size: 14px;
+    flex-wrap: nowrap;
+    margin: 5px 0;
+  }
+
+  .about-info p span.title-s {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .about-info p span:not(.title-s) {
+    white-space: nowrap;
+  }
+
+  /* UL-based About Details */
+  .about-info ul {
+    padding: 0 15px;
+  }
+
+  .about-info li {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .about-info li span:first-child {
+    font-weight: bold;
+  }
+
+
+  .about-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-info li {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.about-info li .title-s {
+  width: 100px; /* fixed width for perfect column */
+  font-weight: bold;
+  display: inline-block;
+}
+
+  /* Paragraph in About Me: Keep it within screen */
+  .heading-section p {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 1rem;
+  }
+
+  /* Prevent unwanted scroll/gap */
+  .about-mf .box-shadow-full {
+    overflow: hidden !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .counter-wrap {
+    margin-top: 1rem !important;
   }
 }
 
+.about-info {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-info li {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 0;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.about-info .title-s {
+  width: 150px;
+  font-weight: 600;
+  display: inline-block;
+  color: #fff;
+}
+
+.about-info li span:not(.title-s) {
+  flex: 1;
+  color: #ccc;
+}
 
 
 </style>
@@ -304,11 +402,15 @@
 									<!-- Details next to profile image -->
 									<div class="col-sm-12 col-md-7">
 										<div class="about-info">
-											<p><span class="title-s">Name:</span> <span>Fathima Shaima</span></p>
-<p><span class="title-s">Title:</span> <span>Web Developer</span></p>
-<p><span class="title-s">Email:</span> <span>shaimashai88@gmail.com</span></p>
-<p><span class="title-s">Address:</span> <span>Mangalore, India</span></p>
-
+											<div class="about-info">
+												<ul>
+												  <li><span class="title-s">Name</span> : <span>Fathima Shaima</span></li>
+												  <li><span class="title-s">Title</span> : <span>Web Developer</span></li>
+												  <li><span class="title-s">Email</span> : <span>shaimashai88@gmail.com</span></li>
+												  <li><span class="title-s">Address</span> : <span>Mangalore, India</span></li>
+												</ul>
+											  </div>
+											  
 										  </div>
 										  
 									</div>
@@ -369,17 +471,24 @@
 									creative and effective. I take pride in my ability to adapt, learn quickly, and contribute meaningfully to every project I take on.
 									
 									</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Web Developer</span></li>
-								
-								    <li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Application</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi,Kannada</span></li>
-									<li class="d-flex"><span>Certifications:</span> <span>Microsoft Azure Data Fundamentals,Cyber Security,Microsoft Security,Compilance &amp;Identity Fundamentals </span></li>
-									<li class="d-flex"><span>Core Skills:</span> <span>Team Work,Communication,Adaptability</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Microsoft Office Suite,Web Hosting Services</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling,Reading Novels,Learning Languages</span></li>
-									
-								</ul>
+									<ul class="about-info mt-4 px-md-0 px-2">
+										<li><span class="title-s">Profile</span> : <span>Web Developer</span></li>
+										<li><span class="title-s">Education</span> : <span>Bachelor of Computer Application</span></li>
+										<li><span class="title-s">Language</span> : <span>English, Hindi, Kannada</span></li>
+										<li><span class="title-s">Certifications</span> : 
+										  <span>Microsoft Azure Data Fundamentals, Cyber Security, Microsoft Security, Compliance & Identity Fundamentals</span>
+										</li>
+										<li><span class="title-s">Core Skills</span> : 
+										  <span>Team Work, Communication, Adaptability</span>
+										</li>
+										<li><span class="title-s">Other Skills</span> : 
+										  <span>Microsoft Office Suite, Web Hosting Services</span>
+										</li>
+										<li><span class="title-s">Interest</span> : 
+										  <span>Traveling, Reading Novels, Learning Languages</span>
+										</li>
+									  </ul>
+									  
 							</div>
 						</div>
 
