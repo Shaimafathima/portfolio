@@ -10150,3 +10150,43 @@ textarea.form-control {
 
 
 
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.about-info li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.about-info .title-s {
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.about-info li span:last-child {
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+  .about-info li {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .about-info li span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
